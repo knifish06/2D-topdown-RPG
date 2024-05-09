@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
-    public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
+    public bool FacingLeft { get { return facingLeft; } }
     private bool facingLeft = false;
 
     [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float dashSpeed = 4f;
+    [SerializeField] private TrailRenderer myTrailRenderer;
+    private bool isDashing = false;
 
     private PlayerControls playerControls;
     private Vector2 movement;
@@ -16,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
+    private float startingMoveSpeed;
 
     private void Awake()
     {
@@ -24,6 +28,13 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRender = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        playerControls.Combat.Dash.performed += _ => Dash();
+
+        startingMoveSpeed = moveSpeed;
     }
 
     private void OnEnable()
@@ -63,13 +74,35 @@ public class PlayerController : MonoBehaviour
         if(mousePos.x < playerScreenPoint.x)
         {
             mySpriteRender.flipX= true;
-            FacingLeft = true;
+            facingLeft = true;
         }
         else
         {
             mySpriteRender.flipX= false;
-            FacingLeft = false;
+            facingLeft = false;
         }
     }
-}
+
+    private void Dash()
+    {
+        if(!isDashing)
+        {
+            isDashing = true;
+            moveSpeed *= dashSpeed;
+            myTrailRenderer.emitting = true;
+            StartCoroutine(EndDashRoutine());
+        }    
+    }
+
+    private IEnumerator EndDashRoutine()
+    {
+        float dashTime = .2f;
+        float dashCD = .25f;
+        yield return new WaitForSeconds(dashTime);
+        moveSpeed = startingMoveSpeed;
+        myTrailRenderer.emitting= false;
+        yield return new WaitForSeconds(dashCD);
+        isDashing =false; 
+    }
+} 
  
