@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
-{
-    public static PlayerController Instance;
+public class PlayerController : Singleton<PlayerController>
+{ 
     public bool FacingLeft { get { return facingLeft; } }
     private bool facingLeft = false;
 
@@ -21,9 +20,9 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer mySpriteRender;
     private float startingMoveSpeed;
 
-    private void Awake()
-    {
-        Instance = this;
+    protected override void Awake()
+    { 
+        base.Awake();
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();

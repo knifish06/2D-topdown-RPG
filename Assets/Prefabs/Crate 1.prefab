@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5000336400068116871}
   - component: {fileID: 1212720327631869488}
   - component: {fileID: 1727293980272703480}
-  - component: {fileID: 549916438536942020}
+  - component: {fileID: 6437045787059778546}
   m_Layer: 0
   m_Name: Crate 1
   m_TagString: Untagged
@@ -115,13 +115,13 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.037483346, y: -0.061357144}
   m_Size: {x: 1.5543175, y: 1.3502806}
   m_Direction: 1
---- !u!114 &549916438536942020
+--- !u!114 &6437045787059778546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1297081093228679742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4840b938440dcbc4aa3350b60af8c752, type: 3}
+  m_Script: {fileID: 11500000, guid: 812a865ce30383747ba586c5f25948ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyVFX: {fileID: 9094109030091391155, guid: 18baac5580aabb44685db111293046f5, type: 3}
+  destroyVFX: {fileID: 9094109030091391155, guid: 9c3da45af3a5ebd47830955b4337b6e1, type: 3}
