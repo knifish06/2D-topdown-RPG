@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5692c8f3733ef3c40858994c25fb09f6, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 5995589007221783610, guid: 3f11c53da1da97d43959fa3959732590, type: 3}
+  weaponPrefab: {fileID: 8932457119771589296, guid: 3f11c53da1da97d43959fa3959732590, type: 3}
   weaponCooldown: 0.5
+  weaponDamage: 1
+  weaponRange: 0
