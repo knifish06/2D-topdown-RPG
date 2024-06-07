@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7028775575226471919}
   - component: {fileID: -819443095349039096}
   - component: {fileID: 8660078267939859588}
+  - component: {fileID: 5930751741627229981}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -253,6 +254,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6028714235222002548, guid: 163a080aa16b86c4d994b30a2c3672f6, type: 3}
+  bulletMoveSpeed: 6
+  burstCount: 5
+  projectilesPerBurst: 5
+  angleSpread: 124
+  startingDistance: 0.3
+  timeBetweenBursts: 1
+  restTime: 0.1
+  stagger: 1
+  oscillate: 1
+--- !u!210 &5930751741627229981
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563086030166546812}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &6103866003799316079
 GameObject:
   m_ObjectHideFlags: 0
