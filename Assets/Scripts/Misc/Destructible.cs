@@ -20,7 +20,7 @@ public class Destructible : MonoBehaviour
             Instantiate(destroyVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
 
-          //  StartCoroutine(GetMemeAndDisplay());
+           // StartCoroutine(GetMemeAndDisplay());
         }
 
     }
@@ -53,7 +53,7 @@ public class Destructible : MonoBehaviour
                     yield break;
                 }
 
-                Sprite memeSprite = Sprite.Create((imageRequest.downloadHandler as DownloadHandlerTexture), new Rect(0, 0, imageRequest.downloadHandlerTexture.texture.width, imageRequest.downloadHandlerTexture.texture.height), new Vector2(0.5f, 0.5f));
+                Sprite memeSprite = Sprite.Create((imageRequest.downloadHandler as DownloadHandlerTexture), new Rect(0, 0, imageRequest..texture.width, imageRequest.downloadHandlerTexture.texture.height), new Vector2(0.5f, 0.5f));
                 memeImage.sprite = memeSprite;
                 memeImage.gameObject.SetActive(true);
             }

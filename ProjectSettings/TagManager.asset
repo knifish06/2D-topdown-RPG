@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: healthUI
+    uniqueID: 1330067139
+    locked: 0

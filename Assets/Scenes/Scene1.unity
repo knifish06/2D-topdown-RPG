@@ -19889,6 +19889,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1301441899}
+    - target: {fileID: 2259287819292243229, guid: c6b5e29e1aeade44a9b66ac313c52a15, type: 3}
+      propertyPath: weight
+      value: 0.87
+      objectReference: {fileID: 0}
     - target: {fileID: 4137046021674220951, guid: c6b5e29e1aeade44a9b66ac313c52a15, type: 3}
       propertyPath: m_ChildCameras.Array.size
       value: 0
@@ -20201,7 +20205,7 @@ Transform:
   m_GameObject: {fileID: 6641561857688276782}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.67, y: -0.57, z: 0}
+  m_LocalPosition: {x: -0.99, y: -0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20426,6 +20430,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2566167844982573339, guid: eb0c4baed566ae54aae4f20243c01ba4, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324507025204669676, guid: eb0c4baed566ae54aae4f20243c01ba4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324507025204669676, guid: eb0c4baed566ae54aae4f20243c01ba4, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9141841776909935911, guid: eb0c4baed566ae54aae4f20243c01ba4, type: 3}
