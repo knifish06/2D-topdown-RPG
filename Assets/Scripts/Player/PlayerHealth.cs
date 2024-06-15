@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -58,6 +58,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
         StartCoroutine(flash.FlashRoutine());
         canTakeDamage = false;
         currentHealth -= damageAmount;
+        Debug.Log("currentHealth sau khi trừ sát thương: " + currentHealth);
         StartCoroutine(DamageRecoveryRoutine());
         UpdateHealthSlider();
         CheckIfPlayerDeath();
@@ -75,14 +76,14 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private IEnumerator DamageRecoveryRoutine()
     {
         yield return new WaitForSeconds(damageRecoveryTime);
-        canTakeDamage= true;
+        canTakeDamage= true; 
     }
 
-    private void UpdateHealthSlider()
+    public void UpdateHealthSlider()
     {
         if( healthSlider == null)
         {
-            healthSlider = GameObject.Find("HEALTH_SLIDER_TEXT").GetComponent<Slider>();
+            healthSlider = GameObject.Find(HEALTH_SLIDER_TEXT).GetComponent<Slider>();
         }
 
         healthSlider.maxValue = maxHealth;

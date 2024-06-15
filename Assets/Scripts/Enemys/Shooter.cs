@@ -14,8 +14,8 @@ public class Shooter : MonoBehaviour, IEnemy
     [SerializeField] private float timeBetweenBursts;
     [SerializeField] private float restTime = 2f;
     [SerializeField] private bool stagger;
+    [Tooltip("Staggle must be enable for oscillate to function property")]
     [SerializeField] private bool oscillate;
-
 
     private bool isShooting = false;
 
